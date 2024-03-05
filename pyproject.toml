@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "db-api"
+version = "0.1.0"
+description = ""
+authors = ["Anton Kuzmenko <ayukuzmenko@gmail.com>"]
+readme = "README.md"
+packages = [{include = "db_api", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.110.0"}
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.2"
+flake8 = "^7.0.0"
+black = "^24.2.0"
+isort = "^5.13.2"
+mypy = "^1.8.0"
+httpx = "^0.27.0"
+pre-commit = "^3.6.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
